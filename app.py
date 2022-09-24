@@ -14,10 +14,9 @@ def hello_world():  # put application's code here
     data = response.read()
     text = json.loads(data)
     print(text['data']['monitors'][0]['locationStop']['properties'][
-        'title'])
+              'title'])
     return text['data']['monitors'][0]['locationStop']['properties'][
         'title']  # getting only the needed data from the json file
-
 
 
 if __name__ == '__main__':
