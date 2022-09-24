@@ -14,7 +14,7 @@ def hello_world():  # put application's code here
     data = response.read()
     text = json.loads(data)
     print(text['data']['monitors'][0]['locationStop']['properties'][
-              'title'])
+              'title'], file=sys.stderr)
     return text['data']['monitors'][0]['locationStop']['properties'][
         'title']  # getting only the needed data from the json file
 
